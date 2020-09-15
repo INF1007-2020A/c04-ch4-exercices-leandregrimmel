@@ -3,20 +3,36 @@
 
 
 def is_even_len(string: str) -> bool:
-    pass
+    if len(string) % 2 == 0:
+        return True
+    else:
+        return False
 
 
 def remove_third_char(string: str) -> str:
-    pass
+    s = ""
+    for i in range(len(string)):
+        if i != 2:
+            s += string[i]
+    return s
 
 
 def replace_char(string: str, old_char: str, new_char: str) -> str:
-    pass
+    mot = ""
+    for i in range(len(string)):
+        if string[i] != old_char:
+            mot += string[i]
+        else:
+            mot += new_char
+    return mot
 
 
 def get_number_of_char(string: str, char: str) -> int:
-    pass
-
+    count = 0
+    for i in range(len(string)):
+        if string[i] == char:
+            count += 1
+    return count
 
 def get_number_of_words(sentence: str, word: str) -> int:
     pass
@@ -33,10 +49,11 @@ def main() -> None:
     print(f"On supprime le 3e caratère dans la chaine: {chaine}. Résultat : {remove_third_char(chaine)}")
 
     chaine = "hello world!"
-    print(f"On remplace le caratère w par le caractère z dans la chaine: {chaine}. Résultat : {replace_char(chaine, 'w', 'z')}")
-
+    print(
+        f"On remplace le caratère w par le caractère z dans la chaine: {chaine}. Résultat : {replace_char(chaine, 'w', 'z')}")
+    chaine = "hello"
     print(f"Le nombre d'occurrence de l dans hello est : {get_number_of_char(chaine, 'l')}")
-    
+
     chaine = "Baby shark doo doo doo doo doo doo"
     print(f"L'occurence du mot doo dans la chaine {chaine} est: {get_number_of_words(chaine, 'doo')}")
 
