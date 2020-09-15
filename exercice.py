@@ -17,6 +17,9 @@ def remove_third_char(string: str) -> str:
     return s
 
 
+# return string[: 2] + string[3:]
+
+
 def replace_char(string: str, old_char: str, new_char: str) -> str:
     mot = ""
     for i in range(len(string)):
@@ -34,9 +37,14 @@ def get_number_of_char(string: str, char: str) -> int:
             count += 1
     return count
 
-def get_number_of_words(sentence: str, word: str) -> int:
-    pass
 
+def get_number_of_words(sentence: str, word: str) -> int:
+# count = 0
+# phrase = sentence.split()
+# for mot in phrase:
+#     if phrase[mot] == word:
+#         count += 1
+# return count
 
 def main() -> None:
     chaine = "Bonjour!"
