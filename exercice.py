@@ -32,19 +32,20 @@ def replace_char(string: str, old_char: str, new_char: str) -> str:
 
 def get_number_of_char(string: str, char: str) -> int:
     count = 0
-    for i in range(len(string)):
-        if string[i] == char:
+    for current_char in range(len(string)):
+        if string[current_char] == char:
             count += 1
     return count
 
 
 def get_number_of_words(sentence: str, word: str) -> int:
-# count = 0
-# phrase = sentence.split()
-# for mot in phrase:
-#     if phrase[mot] == word:
-#         count += 1
-# return count
+    count = 0
+    phrase = sentence.split()
+    for mot in range(len(phrase)):
+        if phrase[mot] == word:
+            count += 1
+    return count
+
 
 def main() -> None:
     chaine = "Bonjour!"
